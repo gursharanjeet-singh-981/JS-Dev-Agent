@@ -40,7 +40,6 @@ Then **reload VS Code**.
 | **JS Debugger** | Find the root cause of an error or stack trace and fix it |
 | **JS Test Engineer** | Write and run tests (Jest, Vitest, Testing Library, Vue Test Utils, Supertest, Playwright) |
 | **JS Reviewer** | Review code, audit security and performance, or choose libraries. It is read-only and never edits files |
-| **FE Architect** | Turn a Jira ticket and Figma designs into an implementation plan. NAVCO-specific, see below |
 
 ### Slash commands
 
@@ -77,23 +76,11 @@ The agent reads your `package.json` and config files first to learn your framewo
 │   ├── js-dev.agent.md            # Main agent: detects stack, builds features, delegates
 │   ├── js-debugger.agent.md       # Root-cause debugging + fix
 │   ├── js-test-engineer.agent.md  # Unit / component / API / e2e tests
-│   ├── js-reviewer.agent.md       # Read-only review & recommendations
-│   └── fe-architect.agent.md      # Jira + Figma -> tech plan in .github/plans/
+│   └── js-reviewer.agent.md       # Read-only review & recommendations
 ├── skills/                        # react-dev, nextjs-dev, vue-dev, node-dev (loaded on demand)
 └── prompts/                       # /js-build, /js-debug, /js-test, /js-review
 install.sh
 ```
-
-## FE Architect (NAVCO)
-
-This agent plans features for the NAVCO AEM + React islands project. It reads a Jira ticket and Figma designs, checks Confluence and the codebase, and saves a plan to `.github/plans/NAVCO-<ticket>-implementation.md`. It never writes application code.
-
-It needs two MCP servers whose names match its `tools:` list in [fe-architect.agent.md](.github/agents/fe-architect.agent.md):
-
-- `mcp-atlassian` for Jira and Confluence
-- `figma-mcp` for Figma
-
-Add servers under those names in `.vscode/mcp.json` or your user `mcp.json`, or edit the `tools:` list to match the names you use. Because it is project-specific, delete this agent before installing the kit into unrelated projects.
 
 ## Customize
 
@@ -108,5 +95,4 @@ Add servers under those names in `.vscode/mcp.json` or your user `mcp.json`, or 
 | Agents or slash commands don't appear | Reload VS Code, and confirm the files are in `.github/agents` and `.github/prompts` of the open workspace (or installed with `--user`) |
 | `install.sh` exits with an error and prints usage | Pass a target folder or `--user` |
 | Files were skipped during install | They already exist. Re-run with `--force` to overwrite |
-| FE Architect can't read Jira, Confluence, or Figma | Your MCP server names don't match its `tools:` list. See [FE Architect (NAVCO)](#fe-architect-navco) |
 | The agent picks the wrong test runner or package manager | Say which one to use in your prompt, or add it to the matching `SKILL.md` |
