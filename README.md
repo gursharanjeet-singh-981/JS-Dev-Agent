@@ -1,4 +1,4 @@
-# React-Dev-Agent
+# JS-Dev-Agent
 
 Plug-and-play GitHub Copilot agents for **React, Next.js, Vue, and Node.js** projects in **VS Code**: development, debugging, test generation, code review, and planning.
 
