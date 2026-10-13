@@ -4,6 +4,8 @@ Plug-and-play GitHub Copilot agents for **React, Next.js, Vue, and Node.js** pro
 
 Everything runs inside VS Code Copilot Chat. There is nothing to build or run outside the editor, and you choose the AI model with the VS Code model picker.
 
+> **IDE support:** Currently only **VS Code** is supported. A CLI to configure the agents for other IDEs is planned (see [Roadmap](#roadmap)).
+
 ## Requirements
 
 - VS Code with the GitHub Copilot and Copilot Chat extensions, signed in
@@ -81,6 +83,10 @@ The agent reads your `package.json` and config files first to learn your framewo
 └── prompts/                       # /js-build, /js-debug, /js-test, /js-review
 install.sh
 ```
+
+## Roadmap
+
+- A CLI to install and configure the agents for other IDEs (for example Cursor, JetBrains, and others). Until then, `install.sh` targets VS Code only.
 
 ## Customize
 
