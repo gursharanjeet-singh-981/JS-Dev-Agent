@@ -11,6 +11,24 @@ Everything runs inside VS Code Copilot Chat. There is nothing to build or run ou
 - VS Code with the GitHub Copilot and Copilot Chat extensions, signed in
 - A JavaScript/TypeScript project (React, Next.js, Vue, or Node.js)
 
+## Supported languages and frameworks
+
+| Category | Supported |
+|---|---|
+| Languages | JavaScript, TypeScript |
+| Frontend frameworks | React, Next.js (App Router and Pages Router), Vue 3, Nuxt |
+| Backend frameworks | Node.js with Express, Fastify, NestJS, Koa |
+| State management | Redux Toolkit, Zustand, React Context, TanStack Query, SWR, Pinia |
+| Databases / ORMs | Prisma, Mongoose, TypeORM |
+| Validation | zod, joi, valibot |
+| Styling | Tailwind CSS, styled-components |
+| Build tools | Vite, Next.js, Nuxt |
+| Test runners | Jest, Vitest, Mocha |
+| Testing libraries | React Testing Library, Vue Test Utils, Supertest, MSW |
+| End-to-end testing | Playwright, Cypress |
+
+Other languages (for example Python or Java) and other frameworks (for example Angular or Svelte) are not supported.
+
 ## Install
 
 Run `install.sh` from this repo's folder. It copies the agents, slash commands, and framework guides into your project's `.github/` folder, or into your VS Code profile.
